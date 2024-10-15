@@ -94,3 +94,8 @@ app.use('/uploads', express.static('uploads'));
 app.listen(5000, () => {
     console.log('Server running on http://localhost:5000');
 });
+
+app.get('*', (req, res) => {
+    res.status(404).send('Route not found');
+  });
+  
